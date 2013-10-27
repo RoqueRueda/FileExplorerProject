@@ -4,5 +4,6 @@
     <string name="app_name">FileExplorer</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="meta_explorer_item">Path meta</string>
 
 </resources>
