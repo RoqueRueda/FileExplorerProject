@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.roque.rueda.fileexplorer;
+package com.roque.rueda.fileexplorer.utils;
 
 import android.app.Activity;
 import android.preference.PreferenceManager;
