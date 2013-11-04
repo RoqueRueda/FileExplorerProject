@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <color name="blue" value="#0099cc" />
+    <color name="blue_bg">#0099cc</color>
 
 </resources>
