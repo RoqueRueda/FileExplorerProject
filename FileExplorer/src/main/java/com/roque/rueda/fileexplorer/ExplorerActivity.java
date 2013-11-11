@@ -25,8 +25,23 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.os.Build;
+import android.widget.ListView;
 
-public class ExplorerActivity extends ActionBarActivity {
+import com.roque.rueda.fileexplorer.model.FileItem;
+
+import java.io.File;
+import java.util.List;
+
+public class ExplorerActivity extends AbstractListFileActivity {
+
+    private static final String TAG = "ExplorerActivity";
+
+    private static final String CURRENT_DIR = "current-dir";
+
+    private ListView explorerListView;
+    private File currentDir;
+    private List<FileItem>
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
