@@ -15,8 +15,11 @@
  */
 package com.roque.rueda.fileexplorer.utils;
 
+import android.content.Context;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Environment;
+import android.support.v7.appcompat.R;
 import android.webkit.MimeTypeMap;
 
 import java.io.File;
@@ -136,5 +139,35 @@ public class IconUtil {
         }
     }
 
+    public static Drawable getIcon(Context ctx, File file) {
+
+        // Is this a directory?
+        if (!file.isFile()) {
+            if (isProtected(file)) {
+                return ctx.getResources().getDrawable(R.drawable.ic_sys);
+            } else if (isSdCard(file)) {
+                return ctx.getResources().getDrawable(R.drawable.ic_sd);
+            } else {
+                return ctx.getResources().getDrawable(R.drawable.ic_folder);
+            }
+        } else {
+            String fileName = file.getName();
+            if (isProtected(file)) {
+                return ctx.getResources().getDrawable(R.drawable.ic_sys);
+            } else if (fileName.endsWith(".apk")) {
+                return ctx.getResources().getDrawable(R.drawable.ic_apk);
+            } else if (fileName.endsWith(".zip")) {
+                return ctx.getResources().getDrawable(R.drawable.ic_zip);
+            } else if (isMusic(file)) {
+                return ctx.getResources().getDrawable(R.drawable.ic_audio_file);
+            } else if (isVideo(file)) {
+                return ctx.getResources().getDrawable(R.drawable.ic_video_file);
+            } else if (isPicture(file)) {
+                return ctx.getResources().getDrawable(R.drawable.ic_image);
+            } else {
+                return ctx.getResources().getDrawable(R.drawable.ic_file);
+            }
+        }
+    }
 
 }

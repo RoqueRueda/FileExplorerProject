@@ -15,16 +15,9 @@
  */
 package com.roque.rueda.fileexplorer;
 
-import android.support.v7.app.ActionBarActivity;
-import android.support.v7.app.ActionBar;
-import android.support.v4.app.Fragment;
 import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.view.ViewGroup;
-import android.os.Build;
 import android.widget.ListView;
 
 import com.roque.rueda.fileexplorer.adapters.FileListAdapter;
@@ -50,11 +43,11 @@ public class ExplorerActivity extends AbstractListFileActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.explorer);
 
-        if (savedInstanceState == null) {
-            getSupportFragmentManager().beginTransaction()
-                    .add(R.id.container, new FolderListFragment())
-                    .commit();
-        }
+//        if (savedInstanceState == null) {
+//            getSupportFragmentManager().beginTransaction()
+//                    .add(R.id.container, new FolderListFragment())
+//                    .commit();
+//        }
     }
 
 
