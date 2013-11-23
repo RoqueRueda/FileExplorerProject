@@ -27,6 +27,7 @@ import android.view.ViewGroup;
 import android.os.Build;
 import android.widget.ListView;
 
+import com.roque.rueda.fileexplorer.adapters.FileListAdapter;
 import com.roque.rueda.fileexplorer.model.FileItem;
 
 import java.io.File;
@@ -38,9 +39,10 @@ public class ExplorerActivity extends AbstractListFileActivity {
 
     private static final String CURRENT_DIR = "current-dir";
 
-    private ListView explorerListView;
-    private File currentDir;
-    private List<FileItem>
+    private ListView mExplorerListView;
+    private File mCurrentDir;
+    private List<FileItem> mFiles;
+    private FileListAdapter adapter;
 
 
     @Override
